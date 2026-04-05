@@ -174,9 +174,9 @@ canvas.pointer{cursor:pointer}
 }
 #ld-role{font-size:9px;letter-spacing:4px;opacity:.35;text-transform:uppercase;margin-bottom:28px}
 #ld-bar-bg{width:150px;height:2px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
-#ld-bar{height:100%;border-radius:2px;background:linear-gradient(90deg,#7733ff,#00ccff,#ff2288);animation:ldbar 1.8s ease-out forwards}
+#ld-bar{height:100%;border-radius:2px;background:linear-gradient(90deg,#6644aa,#2277aa,#aa3366);animation:ldbar 1.8s ease-out forwards}
 #ld-text{margin-top:14px;font-size:9px;letter-spacing:3px;opacity:.3;text-transform:uppercase;animation:ldtext 1.8s ease-in-out infinite}
-@keyframes ldglow{0%,100%{text-shadow:0 0 20px rgba(119,51,255,.5)}50%{text-shadow:0 0 50px rgba(0,204,255,.7),0 0 100px rgba(0,204,255,.25)}}
+@keyframes ldglow{0%,100%{text-shadow:0 0 14px rgba(100,80,170,.4)}50%{text-shadow:0 0 28px rgba(34,119,170,.5),0 0 50px rgba(34,119,170,.15)}}
 @keyframes ldbar{from{width:0}to{width:100%}}
 @keyframes ldtext{0%,100%{opacity:.3}50%{opacity:.6}}
 </style>
@@ -225,18 +225,18 @@ canvas.pointer{cursor:pointer}
 const BDATA = [
   {
     id:'bio', label:'BIOGRAPHY', pos:[0,0,0], w:5.5,d:5.5,h:13,
-    color:0x8844ff, accent:'#9966ff',
+    color:0x6644aa, accent:'#7755bb',
     content:{
       type:'bio',
       title:'About Me',
       subtitle:'Computer Science @ UT Dallas',
-      body:`Hey! I'm Krish — a sophomore CS student at the University of Texas at Dallas (Class of May 2027) passionate about AI infrastructure, graph databases, and building systems that scale.\n\nI thrive at the intersection of cutting-edge ML and real-world engineering. From building multimodal AI tutors to designing knowledge graph pipelines, I love turning research into production systems.\n\nCurrently seeking Summer 2026 SWE & AI Engineering internships at top-tier tech companies and ambitious startups.`,
-      tags:['UT Dallas 2027','AI Engineering','SWE Intern Seeker','Open to Opportunities']
+      body:`Hey! I'm Krish, a sophomore CS student at the University of Texas at Dallas (Class of May 2027). I am drawn to the technical intricacies of AI infrastructure, graph databases, and building systems that scale.\n\nI enjoy being at the intersection of cutting edge ML breakthroughs and real world engineering, to build software that has an impact. I love turning research and science based topics into production systems, from building multimodal learning science based AI tutors to designing knowledge graph pipelines for productivity tracking.\n\nCurrently seeking internships and co-ops at top-tier tech companies and ambitious startups.`,
+      tags:['UT Dallas 2027','AI Engineering','Open to Opportunities']
     }
   },
   {
     id:'edu', label:'EDUCATION', pos:[-11,0,-9], w:4.5,d:4.5,h:9,
-    color:0x00ccff, accent:'#22ddff',
+    color:0x2277aa, accent:'#3388bb',
     content:{
       type:'bio',
       title:'Education',
@@ -247,36 +247,37 @@ const BDATA = [
   },
   {
     id:'proj', label:'PROJECTS', pos:[12,0,-5], w:5.5,d:4.5,h:12,
-    color:0xff2288, accent:'#ff3399',
+    color:0xaa3366, accent:'#bb4477',
     content:{
       type:'projects',
       title:'Projects',
       subtitle:"Things I've shipped",
       projects:[
         {
-          name:'Aris — AI Drawing Tutor',
+          name:'Aris: AI Drawing Tutor',
           desc:'Real-time multimodal AI drawing tutor using Gemini Multimodal Live API over a persistent WebSocket. Graph-based memory via Mem0 enables personalized, session-aware tutoring sessions. Deployed on Vercel + Render.',
           tech:['Gemini Multimodal','React/Vite','Tailwind','Python','WebSocket','Mem0'],
-          link:'https://github.com/kjoshi'
+          link:'https://github.com/kjoshiDTX',
+          liveLink:'https://aris-canvas.vercel.app'
         },
         {
-          name:'ContextIQ — GraphRAG',
-          desc:'Knowledge graph-powered RAG implementation modeled on Microsoft GraphRAG research. Extracts knowledge triplets to enable semantically-rich search across large document corpora. Key project for top-tier recruiting.',
+          name:'ContextIQ: GraphRAG',
+          desc:'Knowledge graph-powered RAG implementation modeled on Microsoft GraphRAG research. Extracts knowledge triplets to enable semantically-rich search across large document corpora.',
           tech:['GraphRAG','Knowledge Graphs','Python','LLMs','Neo4j'],
-          link:'https://github.com/kjoshi'
+          link:'https://github.com/kjoshiDTX'
         },
         {
           name:'llm-healthcare',
           desc:'LLM pipeline extracting structured clinical data from medical discharge summaries. Features a unified Pydantic v2 schema with field validators for dose/frequency normalization.',
           tech:['Groq','Gemini API','Pydantic v2','Python','pytest'],
-          link:'https://github.com/kjoshi'
+          link:'https://github.com/kjoshiDTX'
         }
       ]
     }
   },
   {
     id:'skills', label:'SKILLS', pos:[-12,0,5], w:4.5,d:4.5,h:8,
-    color:0x00ff99, accent:'#22ffaa',
+    color:0x337755, accent:'#448866',
     content:{
       type:'skills',
       title:'Tech Stack',
@@ -285,13 +286,14 @@ const BDATA = [
         'Languages':['Python','C++','JavaScript','TypeScript','SQL','Bash'],
         'Frameworks':['React','Vite','Tailwind','FastAPI','pytest'],
         'AI / ML':['Gemini API','Groq','GraphRAG','Mem0','RAG Systems','Pydantic v2'],
-        'Infra & Tools':['AWS','Docker','Git','Vercel','Render','Linux','GitHub']
+        'Infra & Tools':['AWS','Docker','Git','Vercel','Render','Linux','GitHub'],
+        'Certifications':['AWS Cloud Practitioner (CCP)','AWS AI Practitioner (AIF)']
       }
     }
   },
   {
     id:'interests', label:'INTERESTS', pos:[10,0,10], w:4.5,d:4.5,h:7,
-    color:0xffaa00, accent:'#ffcc22',
+    color:0xaa7722, accent:'#bb8833',
     content:{
       type:'bio',
       title:'Interests & Passions',
@@ -302,16 +304,17 @@ const BDATA = [
   },
   {
     id:'contact', label:'CONTACT', pos:[1,0,14], w:4.5,d:4.5,h:5.5,
-    color:0xff6644, accent:'#ff7755',
+    color:0xaa5533, accent:'#bb6644',
     content:{
       type:'contact',
       title:'Get In Touch',
       subtitle:"Let's connect",
-      body:`I'm actively seeking Summer 2026 SWE & AI Engineering internships — especially in AI Platform Engineering, LLM Infrastructure, and ML Systems.\n\nTarget companies include Meta, Nvidia, Apple, Google, and ambitious startups building at the frontier.`,
+      body:`I'm actively seeking internships and co-ops focused on technology that has an impact, graph architecture, and AI and ML infrastructure.\n\nTarget roles include AI Platform Engineering, LLM Infrastructure, graph systems, and ambitious startups pushing the frontier of tech.`,
       links:[
-        {icon:'⌥', label:'GitHub', sub:'github.com/kjoshi', url:'https://github.com/kjoshi'},
-        {icon:'🔗', label:'LinkedIn', sub:'linkedin.com/in/kjoshi', url:'https://linkedin.com/in/kjoshi'},
-        {icon:'✉', label:'Email', sub:'krish.joshi@utdallas.edu', url:'mailto:krish.joshi@utdallas.edu'}
+        {icon:'⌥', label:'GitHub', sub:'github.com/kjoshiDTX', url:'https://github.com/kjoshiDTX'},
+        {icon:'🔗', label:'LinkedIn', sub:'linkedin.com/in/krish-joshi005', url:'https://linkedin.com/in/krish-joshi005'},
+        {icon:'✉', label:'Email', sub:'krish.joshi005@gmail.com', url:'mailto:krish.joshi005@gmail.com'},
+        {icon:'🎓', label:'School Email', sub:'kxj230025@utdallas.edu', url:'mailto:kxj230025@utdallas.edu'}
       ]
     }
   }
@@ -549,8 +552,8 @@ function mkBuilding(data){
   const el = document.createElement('div');
   el.className = 'lbl';
   el.innerHTML = `
-    <div class="lbl-pill" style="color:${accent};border-color:${accent};box-shadow:0 0 12px ${accent}55">${label}</div>
-    <div class="lbl-dot" style="background:${accent};box-shadow:0 0 10px ${accent}"></div>
+    <div class="lbl-pill" style="color:${accent};border-color:${accent}88">${label}</div>
+    <div class="lbl-dot" style="background:${accent};opacity:.7"></div>
   `;
   el.addEventListener('click', ()=>selectBuilding(data));
   document.getElementById('labels').appendChild(el);
@@ -564,13 +567,13 @@ BDATA.forEach(mkBuilding);
 //  DECORATIVE SMALL BUILDINGS
 // ══════════════════════════════════════════════════════
 const smallDefs = [
-  [-5,-17,3.5,0x8844ff],[-3,-20,5.5,0x00ccff],[4,-18,4,0x8844ff],[7,-15,2.5,0xff2288],
-  [17,-2,4.5,0xff2288],[20,-5,6.5,0x00ccff],[18,5,3.5,0x00ff99],[20,3,2.5,0xff2288],
-  [-17,8,4,0x00ff99],[-20,11,5.5,0xffaa00],[-16,15,4.2,0x00ff99],[-20,14,2.5,0x8844ff],
-  [4,20,3.5,0xff6644],[9,22,5,0xffaa00],[-4,21,4,0xff6644],[-7,20,2.5,0xffaa00],
-  [-20,-7,4.5,0x00ccff],[-22,-12,6.5,0x8844ff],[-18,-14,3,0x00ccff],[-21,-4,2.8,0xff2288],
-  [14,15,4,0xffaa00],[17,18,3,0xff6644],[3,-11,2,0xff2288],[-8,5,2.2,0x8844ff],
-  [6,4,1.8,0xffaa00],[-3,10,1.6,0x00ff99],[8,-9,2.4,0xff2288],[-9,-6,1.9,0x00ccff],
+  [-5,-17,3.5,0x6644aa],[-3,-20,5.5,0x2277aa],[4,-18,4,0x6644aa],[7,-15,2.5,0xaa3366],
+  [17,-2,4.5,0xaa3366],[20,-5,6.5,0x2277aa],[18,5,3.5,0x337755],[20,3,2.5,0xaa3366],
+  [-17,8,4,0x337755],[-20,11,5.5,0xaa7722],[-16,15,4.2,0x337755],[-20,14,2.5,0x6644aa],
+  [4,20,3.5,0xaa5533],[9,22,5,0xaa7722],[-4,21,4,0xaa5533],[-7,20,2.5,0xaa7722],
+  [-20,-7,4.5,0x2277aa],[-22,-12,6.5,0x6644aa],[-18,-14,3,0x2277aa],[-21,-4,2.8,0xaa3366],
+  [14,15,4,0xaa7722],[17,18,3,0xaa5533],[3,-11,2,0xaa3366],[-8,5,2.2,0x6644aa],
+  [6,4,1.8,0xaa7722],[-3,10,1.6,0x337755],[8,-9,2.4,0xaa3366],[-9,-6,1.9,0x2277aa],
 ];
 smallDefs.forEach(([x,z,h,c])=>{
   const sw=1.2+Math.random()*.9, sd=1.2+Math.random()*.9;
@@ -599,8 +602,8 @@ smallDefs.forEach(([x,z,h,c])=>{
 // ══════════════════════════════════════════════════════
 //  ROADS (neon strips connecting buildings)
 // ══════════════════════════════════════════════════════
-[[0,0,-11,-9,0x00ccff],[0,0,12,-5,0xff2288],
- [0,0,-12,5,0x00ff99],[0,0,10,10,0xffaa00],[0,0,1,14,0xff6644]
+[[0,0,-11,-9,0x2277aa],[0,0,12,-5,0xaa3366],
+ [0,0,-12,5,0x337755],[0,0,10,10,0xaa7722],[0,0,1,14,0xaa5533]
 ].forEach(([x1,z1,x2,z2,c])=>{
   const dx=x2-x1, dz=z2-z1;
   const len=Math.sqrt(dx*dx+dz*dz);
@@ -719,6 +722,7 @@ function selectBuilding(data){
       h += `<div class="pc-desc">${p.desc}</div>`;
       h += `<div class="pc-tech">${p.tech.map(t=>`<span class="chip">${t}</span>`).join('')}</div>`;
       h += `<a class="pc-link" href="${p.link}" target="_blank" rel="noopener" style="color:${accent}">→ View on GitHub</a>`;
+      if(p.liveLink) h += `<a class="pc-link" href="${p.liveLink}" target="_blank" rel="noopener" style="color:${accent};margin-left:14px">→ Live Demo</a>`;
       h += `</div>`;
     });
   }
@@ -752,7 +756,7 @@ const districtsEl = document.getElementById('districts');
 BDATA.forEach(d => {
   const btn = document.createElement('div');
   btn.className = 'district-btn';
-  btn.innerHTML = `<div class="district-dot" style="background:${d.accent};box-shadow:0 0 6px ${d.accent}"></div>${d.label}`;
+  btn.innerHTML = `<div class="district-dot" style="background:${d.accent};opacity:.8"></div>${d.label}`;
   btn.addEventListener('click', () => selectBuilding(d));
   districtsEl.appendChild(btn);
 });
