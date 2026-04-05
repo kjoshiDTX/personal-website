@@ -257,20 +257,18 @@ const BDATA = [
           name:'Aris: AI Drawing Tutor',
           desc:'Real-time multimodal AI drawing tutor using Gemini Multimodal Live API over a persistent WebSocket. Graph-based memory via Mem0 enables personalized, session-aware tutoring sessions. Deployed on Vercel + Render.',
           tech:['Gemini Multimodal','React/Vite','Tailwind','Python','WebSocket','Mem0'],
-          link:'https://github.com/kjoshiDTX',
           liveLink:'https://aris-canvas.vercel.app'
         },
         {
           name:'ContextIQ: GraphRAG',
           desc:'Knowledge graph-powered RAG implementation modeled on Microsoft GraphRAG research. Extracts knowledge triplets to enable semantically-rich search across large document corpora.',
           tech:['GraphRAG','Knowledge Graphs','Python','LLMs','Neo4j'],
-          link:'https://github.com/kjoshiDTX'
+          link:'https://github.com/kjoshiDTX/ContextIQ'
         },
         {
           name:'llm-healthcare',
           desc:'LLM pipeline extracting structured clinical data from medical discharge summaries. Features a unified Pydantic v2 schema with field validators for dose/frequency normalization.',
-          tech:['Groq','Gemini API','Pydantic v2','Python','pytest'],
-          link:'https://github.com/kjoshiDTX'
+          tech:['Groq','Gemini API','Pydantic v2','Python','pytest']
         }
       ]
     }
@@ -721,7 +719,7 @@ function selectBuilding(data){
       h += `<div class="pc-name" style="color:${accent}">${p.name}</div>`;
       h += `<div class="pc-desc">${p.desc}</div>`;
       h += `<div class="pc-tech">${p.tech.map(t=>`<span class="chip">${t}</span>`).join('')}</div>`;
-      h += `<a class="pc-link" href="${p.link}" target="_blank" rel="noopener" style="color:${accent}">→ View on GitHub</a>`;
+      if(p.link) h += `<a class="pc-link" href="${p.link}" target="_blank" rel="noopener" style="color:${accent}">→ View on GitHub</a>`;
       if(p.liveLink) h += `<a class="pc-link" href="${p.liveLink}" target="_blank" rel="noopener" style="color:${accent};margin-left:14px">→ Live Demo</a>`;
       h += `</div>`;
     });
