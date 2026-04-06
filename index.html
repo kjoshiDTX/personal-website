@@ -255,13 +255,13 @@ const BDATA = [
       projects:[
         {
           name:'Aris: AI Drawing Tutor',
-          desc:'Real-time multimodal AI drawing tutor using Gemini Multimodal Live API over a persistent WebSocket. Graph-based memory via Mem0 enables personalized, session-aware tutoring sessions. Deployed on Vercel + Render.',
+          desc:'Real time multimodal AI drawing tutor using Gemini Multimodal Live API over a persistent WebSocket. Graph based memory via Mem0 enables personalized, session-aware tutoring sessions. Deployed on Vercel + Render.',
           tech:['Gemini Multimodal','React/Vite','Tailwind','Python','WebSocket','Mem0'],
-          liveLink:'https://aris-canvas.vercel.app'
+          liveLink:'https://www.youtube.com/watch?v=ZVX0HR5iJJY'
         },
         {
           name:'ContextIQ: GraphRAG',
-          desc:'Knowledge graph-powered RAG implementation modeled on Microsoft GraphRAG research. Extracts knowledge triplets to enable semantically-rich search across large document corpora.',
+          desc:'Knowledge graph powered RAG implementation modeled on Microsoft GraphRAG research. Extracts knowledge triplets to enable semantically rich search across large document corpora.',
           tech:['GraphRAG','Knowledge Graphs','Python','LLMs','Neo4j'],
           link:'https://github.com/kjoshiDTX/ContextIQ'
         },
@@ -720,7 +720,7 @@ function selectBuilding(data){
       h += `<div class="pc-desc">${p.desc}</div>`;
       h += `<div class="pc-tech">${p.tech.map(t=>`<span class="chip">${t}</span>`).join('')}</div>`;
       if(p.link) h += `<a class="pc-link" href="${p.link}" target="_blank" rel="noopener" style="color:${accent}">→ View on GitHub</a>`;
-      if(p.liveLink) h += `<a class="pc-link" href="${p.liveLink}" target="_blank" rel="noopener" style="color:${accent};margin-left:14px">→ Live Demo</a>`;
+      if(p.liveLink) h += `<a class="pc-link" href="${p.liveLink}" target="_blank" rel="noopener" style="color:${accent};margin-left:14px">→ Watch Demo</a>`;
       h += `</div>`;
     });
   }
